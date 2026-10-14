@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anonymized sample curriculum vitae for an Operation Theater Technology Professional." />
+  <title>Alex Morgan — Operation Theater Technology (Sample Resume)</title>
+  <style>
+
+    :root {
+      --paper: #f8f8f5;
+      --ink: #101010;
+      --muted: #585858;
+      --red: #f23b24;
+      --yellow: #ffc719;
+      --soft-red: #ff4a31;
+      --surface: #ffffff;
+      --panel-gray: #686868;
+      --body-copy: #3f3f3f;
+      --body-copy-strong: #353535;
+      --track: #ffffff;
+      --on-red: #ffffff;
+      --line: 3px solid var(--ink);
+      --shadow: 8px 9px 0 var(--ink);
+      --radius-xl: 31px;
+      --radius-lg: 25px;
+      --radius-pill: 999px;
+      --ease: cubic-bezier(.23, 1, .32, 1);
+    }
+
+    html.dark {
+      --paper: #171513;
+      --ink: #fff8eb;
+      --muted: #d0c6b8;
+      --red: #ff5b43;
+      --yellow: #f4c430;
+      --soft-red: #ff7659;
+      --surface: #24211e;
+      --panel-gray: #514c47;
+      --body-copy: #e5dbce;
+      --body-copy-strong: #f0e4d5;
+      --track: #f2eadf;
+      --on-red: #171513;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .14;
+      background-image: radial-gradient(var(--ink) 0.6px, transparent 0.7px);
+      background-size: 7px 7px;
+      mix-blend-mode: multiply;
+      z-index: 20;
+    }
+    a { color: inherit; }
+    .page {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 110px;
+      position: relative;
+    }
+    .page::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 190px;
+      height: 370px;
+      left: -105px;
+      bottom: 40px;
+      background: var(--red);
+      border: var(--line);
+      border-radius: 55% 55% 0 0;
+      transform: rotate(-12deg);
+      box-shadow: 7px 0 0 var(--ink);
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+      color: var(--muted);
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .topbar strong { color: var(--ink); }
+    .topbar a { text-decoration: none; border-bottom: 2px solid var(--red); }
+    .topbar-actions { display: inline-flex; align-items: center; gap: 9px; }
+    .utility-button {
+      appearance: none;
+      border: 2px solid var(--ink);
+      border-radius: var(--radius-pill);
+      background: var(--surface);
+      color: var(--ink);
+      padding: 7px 12px;
+      font: inherit;
+      font-size: .66rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      transition: transform .18s var(--ease), background-color .18s var(--ease), color .18s var(--ease);
+    }
+    .utility-button:hover { transform: translateY(-2px); background: var(--yellow); color: var(--ink); }
+    .utility-button:active { transform: scale(.97); }
+    .utility-button:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+
+    .hero {
+      position: relative;
+      min-height: 324px;
+      display: grid;
+      grid-template-columns: 1fr 315px;
+      align-items: stretch;
+      overflow: visible;
+      background: var(--surface);
+      border: var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+    .hero-copy { padding: 62px 42px 42px 64px; position: relative; }
+    .eyebrow, .section-label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 48px;
+      padding: 7px 30px;
+      border: var(--line);
+      border-radius: var(--radius-pill);
+      box-shadow: 4px 5px 0 var(--ink);
+      font-weight: 900;
+      font-size: 1rem;
+      letter-spacing: .01em;
+    }
+    .eyebrow { position: absolute; top: -34px; left: 58px; background: var(--yellow); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 590px;
+      margin: 14px 0 22px;
+      font-family: "Arial Black", "Segoe UI", Arial, sans-serif;
+      font-size: clamp(3.6rem, 8vw, 7.1rem);
+      font-weight: 900;
+      letter-spacing: -.075em;
+      line-height: .84;
+      color: var(--red);
+    }
+    h1 span {
+      display: block;
+      color: var(--yellow);
+      -webkit-text-stroke: 2px var(--ink);
+      text-shadow: 3px 3px 0 var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-weight: 700;
+      letter-spacing: -.055em;
+    }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; color: var(--muted); font-size: .84rem; }
+    .hero-meta a { text-decoration-thickness: 2px; text-decoration-color: var(--red); text-underline-offset: 4px; }
+    .hero-meta .social { display: inline-flex; gap: 9px; margin-right: 3px; }
+    .social a {
+      display: grid;
+      place-items: center;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      color: var(--red);
+      font-size: .78rem;
+      font-weight: 900;
+      text-decoration: none;
+      transition: transform .18s var(--ease), color .18s var(--ease);
+    }
+    .social a:hover { transform: translateY(-3px) rotate(-8deg); color: var(--ink); }
+    .hero-panel {
+      position: relative;
+      margin: 13px 13px 13px 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: visible;
+      background: var(--panel-gray);
+      border: var(--line);
+      border-radius: 26px 26px 23px 23px;
+    }
+    .hero-panel::after {
+      content: "OPERATION THEATER TECHNOLOGY";
+      position: absolute;
+      inset: auto 0 0;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      background: var(--yellow);
+      border-top: var(--line);
+      font-family: "Arial Black", "Segoe UI", Arial, sans-serif;
+      font-size: .95rem;
+      letter-spacing: .22em;
+    }
+    .pointer {
+      position: absolute;
+      top: 56px;
+      left: -43px;
+      z-index: 2;
+      width: 76px;
+      height: 76px;
+      display: grid;
+      place-items: center;
+      background: var(--red);
+      border: var(--line);
+      border-radius: 50%;
+      box-shadow: 3px 4px 0 var(--ink);
+      font-size: 2.7rem;
+      line-height: 1;
+      transform: rotate(-43deg);
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: minmax(250px, 370px) minmax(0, 1fr);
+      gap: 78px;
+      margin-top: 82px;
+    }
+    .rail, .main-column { display: flex; flex-direction: column; gap: 54px; }
+    .section-label { margin-bottom: 27px; position: relative; z-index: 1; font-size: 1.2rem; }
+    .label-red { background: var(--red); color: var(--on-red); }
+    .label-yellow { background: var(--yellow); }
+    .about { padding-left: 53px; position: relative; }
+    .about::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 31px;
+      height: 45px;
+      background-image: radial-gradient(var(--yellow) 3px, transparent 3.7px);
+      background-size: 13px 13px;
+      filter: drop-shadow(1px 1px 0 var(--ink));
+    }
+    .about p { color: var(--body-copy); font-size: .9rem; margin-bottom: 20px; }
+    .card {
+      border: var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+    .skills-card { background: var(--red); padding: 33px 47px 43px; color: var(--on-red); }
+    .skills-card .section-label { color: var(--ink); margin: -2px 0 30px; padding-inline: 31px; font-size: 1.18rem; }
+    .skill { margin: 0 0 17px; }
+    .skill:last-child { margin-bottom: 0; }
+    .skill-head { display: flex; justify-content: space-between; font-size: .82rem; margin-bottom: 5px; }
+    .skill-track { height: 16px; border: 2px solid var(--ink); border-radius: var(--radius-pill); background: var(--track); overflow: hidden; }
+    .skill-fill { height: 100%; background: var(--yellow); border-right: 2px solid var(--ink); }
+    .contact-card { background: var(--surface); padding: 32px 46px 34px; position: relative; }
+    .contact-card .section-label { display: table; margin: -58px 0 24px -12px; font-size: 1.15rem; }
+    .contact-list { display: grid; gap: 13px; font-size: .82rem; }
+    .contact-row { display: grid; grid-template-columns: 21px 1fr; align-items: center; gap: 10px; }
+    .contact-row a { text-decoration: none; }
+    .contact-row a:hover { text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 2px; }
+    .contact-icon { color: var(--red); font-size: 1.1rem; text-align: center; }
+    .motivation-card { background: var(--surface); padding: 32px 46px 34px; position: relative; }
+    .motivation-card .section-label { display: table; margin: -58px 0 24px -12px; font-size: 1.15rem; }
+    .motivation-card p { margin: 0; color: var(--body-copy); font-size: .9rem; line-height: 1.7; }
+    .academic-card { background: var(--surface); padding: 32px 46px 28px; position: relative; }
+    .academic-card .section-label { display: table; margin: -58px 0 24px -12px; font-size: 1.15rem; }
+    .academic-list { display: grid; gap: 11px; }
+    .academic-row { display: flex; justify-content: space-between; gap: 14px; align-items: baseline; font-size: .78rem; }
+    .academic-row span { color: var(--body-copy); }
+    .academic-row strong { font-size: .76rem; white-space: nowrap; }
+
+    .experience-card { background: var(--yellow); padding: 35px 48px 38px; position: relative; }
+    .experience-card .section-label { position: absolute; top: -29px; left: 47px; margin: 0; white-space: nowrap; }
+    .timeline { display: grid; gap: 25px; }
+    .timeline-item { position: relative; padding-left: 33px; }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 13px;
+      height: 13px;
+      background: var(--red);
+      border: 2px solid var(--ink);
+      border-radius: 50%;
+    }
+    .timeline-heading { display: flex; justify-content: space-between; gap: 22px; align-items: baseline; }
+    .timeline-heading h3 { margin: 0; font-family: "Segoe UI", Arial, sans-serif; font-size: 1.08rem; font-weight: 800; line-height: 1.15; }
+    .date { flex: 0 0 auto; font-size: .77rem; font-weight: 900; }
+    .role { margin: 9px 0 9px; font-size: .83rem; font-style: italic; }
+    .timeline-item p { margin: 0; color: var(--body-copy-strong); font-size: .85rem; max-width: 550px; }
+    .education { padding-top: 4px; }
+    .education .section-label { margin-left: 0; }
+    .education-list { display: grid; gap: 25px; }
+    .education-item { padding-left: 35px; position: relative; }
+    .education-item::before { content: ""; position: absolute; top: 7px; left: 0; width: 13px; height: 13px; background: var(--red); border: 2px solid var(--ink); border-radius: 50%; }
+    .education-item h3 { display: flex; justify-content: space-between; gap: 20px; margin-bottom: 10px; font-family: "Segoe UI", Arial, sans-serif; font-size: 1.08rem; font-weight: 800; line-height: 1.1; }
+    .education-item em { display: block; font-size: .82rem; margin-bottom: 9px; }
+    .education-item p { margin: 0; color: var(--body-copy); font-size: .84rem; }
+    .spark { width: 48px; height: 48px; position: absolute; right: -21px; bottom: -20px; background: var(--red); border: var(--line); transform: rotate(45deg); box-shadow: 4px 4px 0 var(--ink); }
+    .spark::after { content: ""; position: absolute; inset: 11px; background: var(--yellow); border: 2px solid var(--ink); }
+
+    @media (max-width: 850px) {
+      .page { width: min(100% - 28px, 680px); padding-top: 38px; }
+      .hero { grid-template-columns: 1fr; min-height: 0; }
+      .hero-copy { padding: 62px 30px 30px; }
+      .hero-panel { min-height: 220px; margin: 0 13px 13px; }
+      .pointer { top: 32px; left: 20px; }
+      .content-grid { grid-template-columns: 1fr; gap: 58px; margin-top: 75px; }
+      .rail, .main-column { gap: 52px; }
+      .about { padding-left: 48px; }
+    }
+    @media (max-width: 500px) {
+      .page { width: min(100% - 22px, 430px); padding-bottom: 74px; }
+      .topbar { font-size: .64rem; margin-bottom: 18px; gap: 8px; }
+      .topbar span:last-child { display: none; }
+      .topbar-actions { gap: 5px; }
+      .utility-button { padding: 6px 8px; font-size: .55rem; letter-spacing: .04em; }
+      .hero { border-radius: 23px; box-shadow: 5px 6px 0 var(--ink); }
+      .eyebrow { left: 19px; top: -28px; min-height: 42px; padding-inline: 20px; font-size: .87rem; box-shadow: 3px 4px 0 var(--ink); }
+      h1 { font-size: clamp(3.4rem, 18vw, 5rem); margin-top: 13px; }
+      .hero-meta { font-size: .76rem; }
+      .hero-panel { min-height: 180px; border-radius: 21px; }
+      .hero-panel::after { height: 44px; font-size: .82rem; letter-spacing: .18em; }
+      .pointer { width: 63px; height: 63px; left: 13px; top: 26px; font-size: 2.2rem; }
+      .content-grid { margin-top: 68px; gap: 50px; }
+      .section-label { min-height: 43px; padding-inline: 22px; font-size: 1rem; box-shadow: 3px 4px 0 var(--ink); }
+      .skills-card, .contact-card, .motivation-card, .academic-card, .experience-card { border-radius: 23px; box-shadow: 5px 6px 0 var(--ink); }
+      .skills-card { padding: 29px 23px 28px; }
+      .skills-card .section-label { margin-bottom: 25px; font-size: 1rem; }
+      .contact-card { padding: 26px 22px 25px; }
+      .contact-card .section-label { margin: -52px 0 22px -7px; }
+      .motivation-card, .academic-card { padding: 26px 22px 25px; }
+      .motivation-card .section-label, .academic-card .section-label { margin: -52px 0 22px -7px; }
+      .motivation-card p { font-size: .84rem; line-height: 1.65; }
+      .experience-card { padding: 31px 22px 30px; }
+      .experience-card .section-label { position: static; display: table; margin: -56px 0 27px -7px; white-space: normal; }
+      .timeline-heading, .education-item h3 { display: block; }
+      .timeline-heading h3, .education-item h3 { font-size: 1rem; }
+      .date { display: block; margin-top: 5px; }
+      .timeline-item { padding-left: 26px; }
+      .timeline-item p, .education-item p { font-size: .8rem; }
+      .education-item { padding-left: 27px; }
+      .spark { transform: scale(.75) rotate(45deg); right: -15px; }
+      .page::after { width: 100px; height: 210px; left: -61px; bottom: 13px; }
+    }
+    @media print {
+      @page { size: A4; margin: 8mm; }
+      html, body { width: auto; min-height: 0; }
+      html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      body { background: #fff !important; font-size: 9.5pt; }
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+      .hero, .card {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      body::before, .topbar, .page::after { display: none !important; }
+      .page { width: auto; max-width: none; min-height: 0; padding: 0; margin: 0; }
+      .hero { min-height: 154px; margin: 0 0 19px; box-shadow: none; }
+      .hero-copy { padding: 21px 24px; }
+      .hero-panel { margin: 8px 8px 8px 0; }
+      .hero-panel::after { height: 35px; font-size: .65rem; }
+      .pointer { top: 34px; left: -28px; width: 54px; height: 54px; font-size: 1.9rem; }
+      .content-grid { grid-template-columns: 30% minmax(0, 1fr); gap: 21px; margin-top: 19px; }
+      .rail, .main-column { gap: 18px; }
+      .about { padding-left: 31px; }
+      .about::before { width: 23px; height: 35px; background-size: 10px 10px; }
+      .about p { font-size: .72rem; margin-bottom: 12px; }
+      .section-label { min-height: 38px; margin-bottom: 10px; padding: 5px 18px; font-size: .8rem; box-shadow: 3px 3px 0 var(--ink); }
+      .card, .experience-card, .skills-card, .contact-card, .motivation-card, .academic-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+      .skills-card, .contact-card, .motivation-card, .academic-card { padding: 16px 14px; }
+      .skills-card .section-label { margin: -1px 0 15px; }
+      .contact-card .section-label, .motivation-card .section-label, .academic-card .section-label { margin: -35px 0 12px -4px; }
+      .skill { margin-bottom: 8px; }
+      .skill-head { margin-bottom: 3px; }
+      .skill-track { height: 12px; }
+      .contact-card { padding-block: 12px; }
+      .contact-list { gap: 8px; }
+      .experience-card { padding: 18px 14px; }
+      .experience-card .section-label { margin: -38px 0 14px -4px; }
+      .timeline-item, .education-item { break-inside: avoid; page-break-inside: avoid; }
+      .timeline-item { padding-left: 18px; margin-bottom: 13px; }
+      .timeline-item p, .education-item p { font-size: .66rem; line-height: 1.3; }
+      .timeline-heading h3, .education-item h3 { font-size: .78rem; }
+      .role, .education-item em { font-size: .64rem; }
+      .education { break-inside: auto; page-break-inside: auto; }
+      .education-list { gap: 12px; }
+      .education-item { padding-left: 18px; }
+      .hero h1 { font-size: 2.65rem; line-height: .9; margin: 8px 0 13px; }
+      .hero-meta { font-size: .62rem; gap: 4px 8px; }
+      .academic-row { font-size: .65rem; gap: 8px; }
+      .academic-row strong { font-size: .63rem; }
+      .footer-note { display: none; }
+      a { text-decoration: none; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .hero, .card { animation: rise .6s var(--ease) both; }
+      .card:nth-child(2) { animation-delay: 80ms; }
+      .card:nth-child(3) { animation-delay: 140ms; }
+      .spark { transition: transform .22s var(--ease); }
+      .spark:hover { transform: rotate(135deg) scale(1.05); }
+    }
+    @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body data-resume="anonymized-sample">
+  <main class="page">
+    <div class="topbar">
+      <strong>CV /Resume</strong>
+      <span>Open to work</span>
+      <div class="topbar-actions">
+        <button class="utility-button" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">Dark mode</button>
+        <button class="utility-button" id="pdfButton" type="button" aria-label="Download CV as PDF">Download PDF</button>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <header class="hero" aria-labelledby="name">
+      <div class="hero-copy">
+        <div class="eyebrow">Curriculum </div>
+        <h1 id="name">Alex <span>Morgan</span></h1>
+        <div class="hero-meta">
+          <span class="social" aria-label="Social links">
+            <a href="#contact" aria-label="Location">⌖</a>
+          </span>
+          <a href="mailto:alex.morgan@example.com">alex.morgan@example.com</a>
+          <span>Based in City, Country · Open to work</span>
+        </div>
+      </div>
+      <div class="hero-panel" aria-label="Operation Theater Technology profile panel">
+        <div class="pointer" aria-hidden="true">↗</div>
+      </div>
+    </header>
+
+    <div class="content-grid">
+      <aside class="rail">
+        <section class="about" aria-labelledby="about-title">
+          <h2 id="about-title" class="section-label label-red">Profile</h2>
+          <p>A dedicated surgical-care professional with a Diploma in OT Technology and practical experience across operating theaters, anesthesia, sterilization, and patient support.</p>
+          <p>Trained in several hospital departments, including general surgery, anesthesia, sterilization, and pediatric care. Seeking a role to contribute reliable technical support, compassionate patient handling, and a high standard of operating-room discipline.</p>
+        </section>
+
+        <section class="skills-card card" aria-labelledby="skills-title">
+          <h2 id="skills-title" class="section-label label-yellow">Core Skills</h2>
+          <div class="skill"><div class="skill-head"><span>Anatomy Knowledge</span><strong>95%</strong></div><div class="skill-track"><div class="skill-fill" style="width:95%"></div></div></div>
+          <div class="skill"><div class="skill-head"><span>Instrument Management</span><strong>95%</strong></div><div class="skill-track"><div class="skill-fill" style="width:95%"></div></div></div>
+          <div class="skill"><div class="skill-head"><span>Job Responsibilities</span><strong>98%</strong></div><div class="skill-track"><div class="skill-fill" style="width:98%"></div></div></div>
+          <div class="skill"><div class="skill-head"><span>Anesthesia Management</span><strong>93%</strong></div><div class="skill-track"><div class="skill-fill" style="width:93%"></div></div></div>
+          <div class="skill"><div class="skill-head"><span>CSSD Work</span><strong>90%</strong></div><div class="skill-track"><div class="skill-fill" style="width:90%"></div></div></div>
+          <div class="skill"><div class="skill-head"><span>Patient Handling</span><strong>90%</strong></div><div class="skill-track"><div class="skill-fill" style="width:90%"></div></div></div>
+          <div class="skill"><div class="skill-head"><span>Laparoscopic Assistance</span><strong>89%</strong></div><div class="skill-track"><div class="skill-fill" style="width:89%"></div></div></div>
+          <div class="skill"><div class="skill-head"><span>Physical Stamina</span><strong>80%</strong></div><div class="skill-track"><div class="skill-fill" style="width:80%"></div></div></div>
+        </section>
+
+        <section class="about" aria-labelledby="focus-title">
+          <h2 id="focus-title" class="section-label label-red">Focus Areas</h2>
+          <p><strong>Surgical support</strong> · <strong>Anesthesia assistance</strong></p>
+          <p><strong>Sterilization</strong> · <strong>Patient care</strong></p>
+            <p><strong>Emergency First-Aid</strong> · <strong>Basic -Medicine-Knowledge</strong></p>
+        </section>
+
+        <section class="academic-card card" aria-labelledby="academic-title">
+          <h2 id="academic-title" class="section-label label-yellow">Academic Performance</h2>
+          <div class="academic-list">
+            <div class="academic-row"><span>OT Diploma</span><strong>Sample result</strong></div>
+            <div class="academic-row"><span>Pre-Medical Studies</span><strong>Sample result</strong></div>
+            <div class="academic-row"><span>Secondary Education</span><strong>Sample result</strong></div>
+          </div>
+        </section>
+
+        <section id="contact" class="contact-card card" aria-labelledby="contact-title">
+          <h2 id="contact-title" class="section-label label-yellow">Contact Me</h2>
+          <div class="contact-list">
+            <div class="contact-row"><span class="contact-icon">⌕</span><a href="tel:+15550100199">+1 (555) 010-0199</a></div>
+            <div class="contact-row"><span class="contact-icon">✉</span><a href="mailto:alex.morgan@example.com">alex.morgan@example.com</a></div>
+            <div class="contact-row"><span class="contact-icon">⌖</span><span>City, Country</span></div>
+            <div class="contact-row"><span class="contact-icon">⊕</span><span>Open to work</span></div>
+          </div>
+        </section>
+      </aside>
+
+      <section class="main-column">
+        <section class="motivation-card card" aria-labelledby="motivation-title">
+          <h2 id="motivation-title" class="section-label label-yellow">My Motivation</h2>
+          <p>Driven by a strong commitment to patient safety and quality surgical care, I aim to support medical teams with discipline, technical reliability, and compassionate patient handling while continuing to grow as an Operation Theater Technology professional.</p>
+        </section>
+        <section class="experience-card card" aria-labelledby="experience-title">
+          <h2 id="experience-title" class="section-label label-red">Clinical Experience</h2>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-heading"><h3>General Hospital — Site A</h3><span class="date">6 Months</span></div>
+              <div class="role">Main Operation Theater</div>
+              <p>Hands-on clinical experience alongside theory classes, with additional placement at a second hospital site.</p>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-heading"><h3>General Hospital — Site B</h3><span class="date">6 Months</span></div>
+              <div class="role">Anesthesia Department</div>
+              <p>Clinical practice in anesthesia procedures, supporting safe and efficient patient care during surgeries.</p>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-heading"><h3>City Teaching Hospital</h3><span class="date">6 Months</span></div>
+              <div class="role">Surgery Wards &amp; Sterilization Department</div>
+              <p>Practical training in hospital wards and sterilization units.</p>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-heading"><h3>Children’s Hospital</h3><span class="date">6 Months</span></div>
+              <div class="role">Pediatric Surgery</div>
+              <p>Focused on safe and compassionate care for infants and children.</p>
+            </article>
+          </div>
+          <div class="spark" aria-hidden="true"></div>
+        </section>
+
+        <section class="education" aria-labelledby="education-title">
+          <h2 id="education-title" class="section-label label-red">Education</h2>
+          <div class="education-list">
+            <article class="education-item">
+              <h3><span>Diploma in Operation Theater</span><span class="date">[20XX — 20XX]</span></h3>
+              <em>Sample Institute of Health Sciences</em>
+              <p>Diploma qualification in Operation Theater Technology.</p>
+            </article>
+            <article class="education-item">
+              <h3><span>Additional Clinical Training</span><span class="date">[20XX — Present]</span></h3>
+              <em></em>
+              <p>Ongoing professional development in clinical support.</p>
+            </article>
+            <article class="education-item">
+              <h3><span>Pre-Medical Studies</span><span class="date">[20XX — 20XX]</span></h3>
+              <em>Sample Regional College</em>
+              <p>Pre-Medical intermediate qualification.</p>
+            </article>
+            <article class="education-item">
+              <h3><span>Secondary Education</span><span class="date">[20XX — 20XX]</span></h3>
+              <em>Sample Public Secondary School</em>
+              <p>Secondary school qualification.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </div>
+
+  </main>
+  <script>
+(() => {
+  const pdfButton = document.getElementById("pdfButton");
+
+  // Opens the browser print dialog, where the user can choose “Save as PDF”.
+  pdfButton.addEventListener("click", () => window.print());
+})();
+</script>
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const themeToggle = document.getElementById('themeToggle');
+
+      let savedTheme = '';
+      try { savedTheme = localStorage.getItem('sample-resume-theme') || ''; } catch (error) {}
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+
+      function applyTheme(isDark) {
+        root.classList.toggle('dark', isDark);
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+        themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+        themeToggle.textContent = isDark ? 'Light mode' : 'Dark mode';
+      }
+
+      applyTheme(initialDark);
+      themeToggle.addEventListener('click', function () {
+        const nextIsDark = !root.classList.contains('dark');
+        applyTheme(nextIsDark);
+        try { localStorage.setItem('sample-resume-theme', nextIsDark ? 'dark' : 'light'); } catch (error) {}
+      });
+      
+    }());
+  </script>
+</body>
+</html>
